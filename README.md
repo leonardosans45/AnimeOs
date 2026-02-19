@@ -21,6 +21,8 @@ Unlike traditional web-apps wrapped in heavy desktop shells (like Electron), Ani
 * Privacy by Design: All data stays on the user's machine (AppData), respecting privacy and eliminating the overhead of managing databases.
 
 Installation (No Cloning Required!)
+Platform Support: Currently, AnimeOS is available for Windows only.
+
 You don't need to clone this repository, install dependencies, or touch any code to use the app. 
 
 To simply install and enjoy AnimeOS:
@@ -30,6 +32,7 @@ To simply install and enjoy AnimeOS:
 
 Important Notice:
 Always run this application as Administrator, or configure the executable's properties to run as Administrator automatically. This is strictly required for the internal backend sidecars to function properly and load episodes.
+
 Known Bugs & Future Updates
 Disclaimer: This is a v1.0 release built rapidly during a vacation period. It currently contains some known bugs and leftover code that have already been identified. 
 
@@ -50,3 +53,6 @@ Credits & Acknowledgements
 * Custom Cursor: Flandre Scarlet cursor design and assets provided by the creator. Support their amazing work here: https://ko-fi.com/s/84f5c0ff32
 * Consumet: Massive thanks to the Consumet project for providing the robust scraping ecosystem that makes media streaming possible.
 * AniList: Thanks to the AniList database and community for providing the essential metadata structure for anime tracking.
+
+License
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). You are free to share and adapt the material, but you may not use it for commercial purposes. See the LICENSE file in the repository for more details.
