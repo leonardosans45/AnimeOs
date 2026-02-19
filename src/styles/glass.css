@@ -1,0 +1,117 @@
+/* 🧊 GLASSMORPHISM UTILITIES - Dark Polarized Style with Real Glass Texture */
+
+.glass {
+                background: 
+                    rgba(0, 0, 0, 0.6),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 200px 150px;
+                background-repeat: repeat;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 0, 0, 0.2);
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel {
+                background: 
+                    rgba(0, 0, 0, 0.6),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 250px 188px;
+                background-repeat: repeat;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border: 1px solid rgba(255, 0, 0, 0.3);
+                box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+                background: 
+                    rgba(0, 0, 0, 0.7),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 180px 135px;
+                background-repeat: repeat;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 0, 0, 0.2);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 30px rgba(255, 0, 0, 0.3);
+                border-color: rgba(255, 0, 0, 0.5);
+}
+
+.glass-button {
+                background: 
+                    rgba(0, 0, 0, 0.5),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 120px 90px;
+                background-repeat: repeat;
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border: 1px solid rgba(255, 0, 0, 0.3);
+                color: white;
+                transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+                background: 
+                    rgba(0, 0, 0, 0.7),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 120px 90px;
+                background-repeat: repeat;
+                box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+                border-color: rgba(255, 0, 0, 0.6);
+}
+
+.glass-input {
+                background: 
+                    rgba(0, 0, 0, 0.6),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 150px 113px;
+                background-repeat: repeat;
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border: 1px solid rgba(255, 0, 0, 0.2);
+                color: white;
+}
+
+.glass-input:focus {
+                background: 
+                    rgba(0, 0, 0, 0.8),
+                    url('/assets/wallpapers/Glass-Texture-Transparent-300x225.png');
+                background-blend-mode: multiply;
+                background-size: 150px 113px;
+                background-repeat: repeat;
+                border-color: var(--neon-red);
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+                outline: none;
+}
+
+/* Text Glow Effects */
+.text-glow {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.text-neon-red {
+                color: var(--neon-red);
+                text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.text-neon-cyan {
+                color: var(--neon-cyan);
+                text-shadow: 0 0 10px rgba(0, 245, 255, 0.7);
+}
+
+.text-neon-magenta {
+                color: var(--neon-magenta);
+                text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}

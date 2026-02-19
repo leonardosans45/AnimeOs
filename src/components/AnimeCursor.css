@@ -1,0 +1,25 @@
+/* Asegura que el cursor de Windows muera */
+html, body, * {
+  cursor: none !important;
+}
+
+.anime-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* CRÍTICO: Permite dar clic a través de la imagen */
+  z-index: 2147483647 !important; /* El número más alto posible en CSS */
+  
+  /* Si tus gifs tienen tamaños distintos, usa auto. Si son iguales, deja 32px */
+  width: auto; 
+  height: auto;
+  
+  user-select: none;
+  /* La transición es solo para opacidad, NO para transform (para que no haya lag) */
+  transition: opacity 0.15s ease; 
+  will-change: transform;
+}
+
+.anime-cursor-hidden {
+  display: none;
+}

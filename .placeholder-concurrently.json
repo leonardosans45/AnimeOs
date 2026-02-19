@@ -1,0 +1,6 @@
+{
+  "name": "concurrently",
+  "description": "Run multiple commands concurrently.",
+  "repository": "https://github.com/open-cli-tools/concurrently",
+  "main": "./src/index.js"
+}

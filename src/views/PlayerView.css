@@ -1,0 +1,476 @@
+/* 🎬 PLAYER VIEW STYLES - YouTube Layout with Cybercore Y2K */
+
+.player-view {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Grid Principal - Estilo YouTube */
+.player-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 25px;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ============ COLUMNA IZQUIERDA - CONTENIDO PRINCIPAL ============ */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: calc(100vh - 80px); /* Altura definida relativa al viewport asumiendo Header 80px */
+    overflow-y: auto !important; /* HABILITAR SCROLL obligatorio */
+    overflow-x: hidden;
+    padding-right: 1rem; /* Espaciado interno para que no se pegue */
+    padding-bottom: 100px; /* Mucho espacio abajo para que la terminal respire */
+    scrollbar-width: thin; /* Scrollbar visible en Firefox */
+    scrollbar-color: var(--neon-red, #ff0033) rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar personalizado para Webkit (Chrome/Edge) */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: var(--neon-red, #ff0033); /* Rojo Neón */
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4444;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+/* Contenedor del Video */
+.video-container {
+    /* 1. Ancho total disponible */
+    width: 100%;
+    
+    /* 2. ALTURA HÍBRIDA (La solución clave) */
+    /* Intenta ser el 55% del alto de la ventana... */
+    height: 55vh; 
+    /* ...PERO NUNCA seas menor a 380px (para el monitor 768p del usuario) */
+    min-height: 380px; 
+    
+    /* 3. Estética y Posicionamiento */
+    background-color: #000; /* Fondo negro visible si falla la carga */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative; /* Indispensable para el iframe absolute */
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    
+    /* 4. Evita que el flexbox lo aplaste */
+    flex-shrink: 0; 
+}
+
+/* Asegurar que el iframe llene ese espacio forzado */
+.video-container iframe,
+.video-container video,
+.video-container .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+/* Info del Video - Compacta */
+.video-info-compact {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.info-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.info-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.compact-title {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--neon-red);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+.compact-separator {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.compact-episode {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.compact-score {
+    background: rgba(255, 0, 0, 0.1);
+    padding: 6px 12px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Sección de Descargas */
+.download-section {
+    margin-top: 10px;
+}
+
+/* Server Selector */
+.server-selector {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.server-select-label {
+    margin-right: 0.5rem;
+}
+
+/* ============ COLUMNA DERECHA - BARRA LATERAL UNIFICADA ============ */
+
+/* Sidebar Unificado - Un solo bloque Glass */
+.sidebar-unified {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 110px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+/* Header Fijo - Navegación */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.nav-btn {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 44px;
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 0, 0, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: rgba(255, 0, 0, 0.15);
+    border-color: var(--neon-red);
+    color: #fff;
+    box-shadow: 
+        0 0 20px rgba(255, 0, 0, 0.5),
+        0 0 40px rgba(255, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 0, 0, 0.1);
+    transform: translateY(-2px) scale(1.05);
+}
+
+.nav-btn:hover:not(:disabled)::before {
+    opacity: 1;
+}
+
+.nav-btn:hover:not(:disabled) svg {
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8));
+    color: var(--neon-red);
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: rgba(60, 60, 60, 0.4);
+    border-color: rgba(100, 100, 100, 0.3);
+    color: rgba(150, 150, 150, 0.6);
+}
+
+.nav-btn:active:not(:disabled) {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 
+        0 0 15px rgba(255, 0, 0, 0.4),
+        inset 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.catalog-btn {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.1));
+    border-color: var(--neon-red);
+}
+
+.catalog-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+/* Lista de Episodios Scrollable */
+.episodes-list-unified {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--neon-red) rgba(0, 0, 0, 0.3);
+}
+
+.episodes-list-unified::-webkit-scrollbar {
+    width: 4px;
+}
+
+.episodes-list-unified::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+.episodes-list-unified::-webkit-scrollbar-thumb {
+    background: var(--neon-red);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.episodes-list-unified::-webkit-scrollbar-thumb:hover {
+    background: #ff4444;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+/* Items de Episodios - Compactos y Limpios */
+.episode-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 36px;
+}
+
+.episode-item:hover {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: rgba(255, 0, 0, 0.4);
+    transform: translateX(2px);
+    box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+}
+
+.episode-item.active {
+    background: rgba(255, 0, 0, 0.15);
+    border-color: var(--neon-red);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+.episode-text {
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 500;
+    flex: 1;
+    text-align: left;
+}
+
+.episode-item.active .episode-text {
+    color: var(--neon-red);
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
+}
+
+.active-pulse {
+    width: 12px;
+    height: 12px;
+    background: var(--neon-red);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+    50% { 
+        opacity: 0.6; 
+        transform: scale(1.2);
+        box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+    }
+}
+
+/* ============ ESTADOS DE CARGA ============ */
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 400px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 0, 0, 0.2);
+    border-top: 4px solid var(--neon-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+    font-family: var(--font-secondary);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* Ajuste para pantallas pequeñas (768p Fix) */
+@media (max-height: 800px) {
+    /* Mantener aspect-ratio perfecto, no sobreescribir con height fijo */
+    .video-container {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 1200px) {
+    .player-grid {
+        grid-template-columns: 1fr 350px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .player-view {
+        padding: 15px;
+    }
+    
+    .player-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .sidebar {
+        order: -1;
+        max-height: 300px;
+    }
+    
+    .episodes-sidebar {
+        max-height: 250px;
+    }
+    
+    .anime-title {
+        font-size: 1.8rem;
+    }
+    
+    .episode-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-view {
+        padding: 10px;
+    }
+    
+    .episode-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-controls {
+        padding: 12px 15px;
+    }
+    
+    .nav-btn {
+        min-width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+}

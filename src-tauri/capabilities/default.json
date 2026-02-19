@@ -1,0 +1,27 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "shell:allow-open",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "binaries/proxy",
+          "cmd": "",
+          "args": true
+        },
+        {
+          "name": "binaries/scraper",
+          "cmd": "",
+          "args": true
+        }
+      ]
+    }
+  ]
+}

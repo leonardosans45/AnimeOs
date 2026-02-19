@@ -1,0 +1,21 @@
+.app-container {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                width: 100vw;
+                position: relative;
+                overflow: hidden;
+}
+
+.main-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: calc(100vh - 70px);
+                /* Full viewport height minus header height */
+                overflow: hidden;
+                /* Let HomeView handle scrolling */
+}

@@ -1,0 +1,506 @@
+/* 🎬 DETAIL VIEW STYLES */
+
+.detail-view {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--neon-red) rgba(0, 0, 0, 0.5);
+}
+
+/* Banner Section */
+.detail-banner {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.8) 85%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
+}
+
+/* Content */
+.detail-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 20px 20px 60px;
+    margin-top: 20px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.3) 10%,
+        rgba(0, 0, 0, 0.7) 40%,
+        rgba(0, 0, 0, 0.95) 80%
+    );
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 90px;
+    left: 20px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--neon-red);
+    color: var(--neon-red);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+    background: rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Main Info Section */
+.main-info-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-container {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.cover-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid var(--neon-red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.basic-info {
+    flex: 1;
+    color: #fff;
+}
+
+.anime-title {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+}
+
+.anime-title-english {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    margin: 0 0 30px 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6)!important;
+    border: 1px solid rgba(255, 0, 0, 0.3) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7) !important;
+    border-radius: 15px !important;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.stat-label {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--neon-red);
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5) !important;
+}
+
+.stat-value.status {
+    text-transform: capitalize;
+}
+
+.stat-value.status.status-finished {
+    color: #4CAF50;
+    text-shadow: 0 0 5px rgba(76, 175, 80, 0.5) !important;
+}
+
+.stat-value.status.status-releasing {
+    color: #2196F3;
+    text-shadow: 0 0 5px rgba(33, 150, 243, 0.5) !important;
+}
+
+.stat-value.status.status-not-yet-released {
+    color: #FF9800;
+    text-shadow: 0 0 5px rgba(255, 152, 0, 0.5) !important;
+}
+
+.stat-value.status.status-cancelled {
+    color: #F44336;
+    text-shadow: 0 0 5px rgba(244, 67, 54, 0.5) !important;
+}
+
+.stat-value.status.status-default {
+    color: #757575;
+    text-shadow: 0 0 5px rgba(117, 117, 117, 0.5) !important;
+}
+
+/* Genres */
+.genres-container h3 {
+    font-family: var(--font-primary);
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8) !important;
+    
+}
+
+.genres-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.genre-tag {
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid var(--neon-red);
+    border-radius: 20px;
+    color: var(--neon-red);
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.genre-tag:hover {
+    background: rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Description Section */
+.description-section {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.description-section h3 {
+    font-family: var(--font-primary);
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.description-text {
+    font-family: var(--font-secondary);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Additional Info */
+.additional-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-card, .episodes-card {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.info-card h3, .episodes-card h3 {
+    font-family: var(--font-primary);
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.info-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-label {
+    font-family: var(--font-secondary);
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.info-value {
+    font-family: var(--font-secondary);
+    color: var(--neon-red);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Episodes Section */
+.episodes-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--neon-red) rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar para episodes grid - Webkit browsers */
+.episodes-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.episodes-grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.episodes-grid::-webkit-scrollbar-thumb {
+    background: var(--neon-red);
+    border-radius: 4px;
+    box-shadow: 0 0 3px var(--neon-red);
+}
+
+.episodes-grid::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+}
+
+.episode-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-secondary);
+}
+
+.episode-button:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: var(--neon-red);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.episode-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--neon-red);
+    margin-bottom: 5px;
+}
+
+.episode-title {
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.8;
+    line-height: 1.3;
+}
+
+.episode-badge {
+    font-size: 0.7rem;
+    background: rgba(255, 165, 0, 0.8);
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.no-episodes {
+    text-align: center;
+    padding: 40px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Loading States */
+.loading-container, .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    color: #fff;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 0, 0, 0.3);
+    border-top: 3px solid var(--neon-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loading-spinner.small {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background: var(--neon-red);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .additional-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cover-container {
+        width: 250px;
+    }
+    
+    .anime-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-content {
+        padding: 20px 15px 40px;
+        margin-top: 250px;
+    }
+    
+    .cover-container {
+        width: 200px;
+    }
+    
+    .cover-image {
+        height: 300px;
+    }
+    
+    .anime-title {
+        font-size: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .episodes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .back-button {
+        top: 80px;
+        left: 10px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

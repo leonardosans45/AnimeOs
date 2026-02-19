@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;600;700&display=swap');
+
+/* 🎨 VARIABLES GLOBALES - TEMA CYBER/ANIME */
+
+:root {
+  /* Colores Neón Primarios */
+  --neon-cyan: #00F5FF;
+  --neon-magenta: #FF00FF;
+  --neon-purple: #B026FF;
+  --neon-pink: #FF10F0;
+  --neon-blue: #00D9FF;
+  --neon-green: #39FF14;
+  --neon-red: #FF3131;
+
+  /* Colores de Fondo */
+  --bg-dark: #0a0a0f;
+  --bg-darker: #050508;
+  --bg-card: rgba(15, 15, 25, 0.7);
+
+  /* Efectos de Vidrio */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --glass-blur: blur(10px);
+
+  /* Tipografía */
+  --font-primary: 'Orbitron', 'Inter', sans-serif;
+  --font-secondary: 'Rajdhani', 'Roboto', sans-serif;
+  --font-accent: 'Exo 2', sans-serif;
+
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Z-Index Layers */
+  --z-background: -1;
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-fixed: 1200;
+  --z-modal-backdrop: 1300;
+  --z-modal: 1400;
+  --z-popover: 1500;
+  --z-tooltip: 1600;
+
+  /* Transiciones */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Sombras Neón */
+  --shadow-cyan: 0 0 20px rgba(0, 245, 255, 0.5);
+  --shadow-magenta: 0 0 20px rgba(255, 0, 255, 0.5);
+  --shadow-purple: 0 0 20px rgba(176, 38, 255, 0.5);
+}
+
+/* Importar Fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;600;700&display=swap');

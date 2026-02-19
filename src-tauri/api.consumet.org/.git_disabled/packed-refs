@@ -1,0 +1,21 @@
+# pack-refs with: peeled fully-peeled sorted 
+fe83008ae946890120bbae2379edc253fe1cb96f refs/remotes/origin/demo
+97f617fed20ddc4d2b4a94cec8ae3b067b970981 refs/remotes/origin/dependabot/github_actions/docker/build-push-action-6
+d88dc481b019cc405845b8643ff8f90ce6beb402 refs/remotes/origin/dependabot/github_actions/docker/setup-qemu-action-3
+dede0b7b449ced5e1e594a67662072bb55ba02f7 refs/remotes/origin/dependabot/npm_and_yarn/chalk-5.3.0
+804803aaea66f277a25650a36be6fc304b89f233 refs/remotes/origin/dependabot/npm_and_yarn/fastify/cors-9.0.1
+0d8614f900adf6351f40ecd71cc122a0cc6de338 refs/remotes/origin/dependabot/npm_and_yarn/typescript-5.4.5
+08aaf9ccb93693e78dad45f559bc0db22e676e35 refs/remotes/origin/feat/pi-deployment
+64d142d361f8129f97d5b89282359b3ca6f5d104 refs/remotes/origin/main
+084dc205e85dbc7c070698c8bc33c9a4f7ca8795 refs/remotes/origin/renovate/actions-checkout-6.x
+0267c27edad5baf7e2f869e3da888446227ec063 refs/remotes/origin/renovate/actions-setup-node-4.x
+92a77f950f13ce914421ce79395087fd2c65e419 refs/remotes/origin/renovate/actions-setup-node-6.x
+2455f5c8dda7639ca7d96706b8ff785433fa72ba refs/remotes/origin/renovate/cheerio-1.x
+f725cfcb6431ee8064c28f11e8fa7dd5bc4264c8 refs/remotes/origin/renovate/docker-build-push-action-6.x
+fc2d81aad7b84272e12317ac76885e530ba0986f refs/remotes/origin/renovate/docker-login-action-3.x
+bd97fdfdcaf6ab6c6a35aabc18e3d5e8431de1d6 refs/remotes/origin/renovate/docker-setup-buildx-action-3.x
+9162e2ae780623b7443f009015166992e444602b refs/remotes/origin/renovate/docker-setup-qemu-action-3.x
+05a71ae58b5374c7480ac7a31b19c10ff61251e4 refs/remotes/origin/renovate/fastify-cors-9.x
+30945215ff7e5cbfa3a896634171f7a3c573e36b refs/remotes/origin/renovate/node-20.x
+213bead25cf516350941bbe4c232579b49c74000 refs/remotes/origin/renovate/typescript-5.x
+000996db22fbab5b6691115851c9eb781deb813e refs/remotes/origin/revert-711-main

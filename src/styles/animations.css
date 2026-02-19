@@ -1,0 +1,147 @@
+/* 🎬 ANIMATIONS */
+
+/* Fade In */
+@keyframes fadeIn {
+                from {
+                                opacity: 0;
+                }
+
+                to {
+                                opacity: 1;
+                }
+}
+
+.fade-in {
+                animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Slide Up */
+@keyframes slideUp {
+                from {
+                                opacity: 0;
+                                transform: translateY(20px);
+                }
+
+                to {
+                                opacity: 1;
+                                transform: translateY(0);
+                }
+}
+
+.slide-up {
+                animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Pulse */
+@keyframes pulse {
+                0% {
+                                transform: scale(1);
+                }
+
+                50% {
+                                transform: scale(1.05);
+                }
+
+                100% {
+                                transform: scale(1);
+                }
+}
+
+.pulse {
+                animation: pulse 2s infinite ease-in-out;
+}
+
+/* Neon Flicker */
+@keyframes neonFlicker {
+
+                0%,
+                19%,
+                21%,
+                23%,
+                25%,
+                54%,
+                56%,
+                100% {
+                                opacity: 1;
+                                text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+                }
+
+                20%,
+                24%,
+                55% {
+                                opacity: 0.5;
+                                text-shadow: none;
+                }
+}
+
+.neon-flicker {
+                animation: neonFlicker 3s infinite alternate;
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+                0% {
+                                transform: translate(0);
+                }
+
+                20% {
+                                transform: translate(-2px, 2px);
+                }
+
+                40% {
+                                transform: translate(-2px, -2px);
+                }
+
+                60% {
+                                transform: translate(2px, 2px);
+                }
+
+                80% {
+                                transform: translate(2px, -2px);
+                }
+
+                100% {
+                                transform: translate(0);
+                }
+}
+
+.glitch:hover {
+                animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+                color: var(--neon-red);
+}
+
+/* Shimmer/Loading */
+@keyframes shimmer {
+                0% {
+                                background-position: -1000px 0;
+                }
+
+                100% {
+                                background-position: 1000px 0;
+                }
+}
+
+.shimmer {
+                animation: shimmer 2s linear infinite;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0.05) 8%, rgba(255, 255, 255, 0.1) 18%, rgba(255, 255, 255, 0.05) 33%);
+                background-size: 1000px 100%;
+}
+
+/* Floating */
+@keyframes float {
+                0% {
+                                transform: translateY(0px);
+                }
+
+                50% {
+                                transform: translateY(-10px);
+                }
+
+                100% {
+                                transform: translateY(0px);
+                }
+}
+
+.float {
+                animation: float 4s ease-in-out infinite;
+}
