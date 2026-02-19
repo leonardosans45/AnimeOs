@@ -2,13 +2,10 @@ AnimeOS
 > AnimeOS is an anime entertainment experience featuring a nostalgic Y2K Cybercore aesthetic. Built over a short personal development timeframe with the help of AI, using React + Vite, and compiled for desktop with Tauri and Node sidecars.
 
 <img width="1366" height="768" alt="Captura de pantalla 2025-12-31 231136" src="https://github.com/user-attachments/assets/aba1c57b-f712-4c42-b795-1cd4fe5b2ad8" />
-<img width="1366" height="768" alt="Captura de pantalla 2025-12-31 231136" src="https://github.com/user-attachments/assets/aba1c57b-f712-4c42-b795-1cd4fe5b2ad8" />
 
 <img width="1366" height="768" alt="Captura de pantalla 2025-12-31 231928" src="https://github.com/user-attachments/assets/6ddd865d-fa20-4cba-ab89-b5491f1db984" />
-<img width="1366" height="768" alt="Captura de pantalla 2025-12-31 231928" src="https://github.com/user-attachments/assets/6ddd865d-fa20-4cba-ab89-b5491f1db984" />
 
-<img width="1366" height="768" alt="Captura de pantalla 2025-12-31 231928" src="https://github.com/user-attachments/assets/4742944c-a28b-4db0-9c66-388e87b76f42" />
-<img width="1366" height="768" alt="Captura de pantalla 2025-12-31 231928" src="https://github.com/user-attachments/assets/4742944c-a28b-4db0-9c66-388e87b76f42" />
+<img width="1366" height="768" alt="Captura de pantalla 2025-12-31 142412" src="https://github.com/user-attachments/assets/14f41109-8f6a-4a7c-ba0e-35f5521bd144" />
 
 The Story Behind AnimeOS (Vibe Coding)
 This project was built from scratch in just 2 to 3 weeks during a winter vacation. 
