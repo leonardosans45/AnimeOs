@@ -24,13 +24,12 @@ Installation (No Cloning Required!)
 You don't need to clone this repository, install dependencies, or touch any code to use the app. 
 
 To simply install and enjoy AnimeOS:
-1. Navigate to the following path in this repository:
-   animeos/src-tauri/target/release/bundle/
-2. Inside that folder, choose the installation type you prefer (e.g., .msi or .exe).
-3. Download the file, run the installer, and start watching!
+1. Go to https://github.com/leonardosans45/AnimeOs/releases.
+2. Download the latest installer file (.msi or .exe).
+3. Run the installer and start watching!
 
-(Note: If the app doesn't load episodes the first time, try running it as Administrator or simply restart the app).
-
+Important Notice:
+Always run this application as Administrator, or configure the executable's properties to run as Administrator automatically. This is strictly required for the internal backend sidecars to function properly and load episodes.
 Known Bugs & Future Updates
 Disclaimer: This is a v1.0 release built rapidly during a vacation period. It currently contains some known bugs and leftover code that have already been identified. 
 
