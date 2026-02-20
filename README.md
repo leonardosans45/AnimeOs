@@ -34,16 +34,48 @@ Unlike traditional web-apps wrapped in heavy desktop shells (like Electron), Ani
 
 **Platform Support:** Currently, AnimeOS is available for **Windows only**.
 
-You don't need to clone this repository, install dependencies, or touch any code to use the app. To simply install and enjoy AnimeOS:
+You don't need to clone this repository, install dependencies, or touch any code to use the app. 
 
-1. Go to the [AnimeOS Releases Page](https://github.com/leonardosans45/AnimeOs/releases).
+To simply install and enjoy AnimeOS:
+1. Go to https://github.com/leonardosans45/AnimeOs/releases.
 2. Download the latest installer file (`.msi` or `.exe`).
 3. Run the installer and start watching!
 
-> **Important Notice:** Always run this application as Administrator, or configure the executable's properties to run as Administrator automatically. This is strictly required for the internal backend sidecars to function properly and load episodes.
+> **Important Notice:**
+> Always run this application as Administrator, or configure the executable's properties to run as Administrator automatically. This is strictly required for the internal backend sidecars to function properly and load episodes.
 
 ---
 
 ## Known Bugs & Future Updates
 
 *Disclaimer: This is a v1.0 release built rapidly during a vacation period. It currently contains some known bugs and leftover code that have already been identified.*
+
+**Upcoming in v2.0:**
+* Comprehensive bug fixes and code cleanup.
+* Full dynamic theming system (featuring other Touhou characters like Remilia).
+* Removal of any need for Administrator privileges.
+
+---
+
+## Tech Stack
+
+* **Frontend:** React + Vite + Tailwind CSS / Custom CSS
+* **Desktop Framework:** Tauri (Rust / WebView2)
+* **Backend / Sidecars:** Node.js (Packaged via `pkg`)
+* **Aesthetic:** Y2K / Cybercore / Touhou Project (Flandre Scarlet)
+
+---
+
+## Credits & Acknowledgements
+
+* **Touhou Project:** Characters and universe created by ZUN / Team Shanghai Alice. This is a non-commercial, fan-made UI experiment and is not affiliated with official Touhou Project releases.
+* **Background Art:** All rights reserved to the respective original artist of the wallpaper used in the application.
+* **Custom Cursor:** Flandre Scarlet cursor design and assets provided by the creator. Support their amazing work here: https://ko-fi.com/s/84f5c0ff32
+* **Consumet:** Massive thanks to the Consumet project for providing the robust scraping ecosystem that makes media streaming possible.
+* **AniList:** Thanks to the AniList database and community for providing the essential metadata structure for anime tracking.
+
+---
+
+## License
+
+This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). You are free to share and adapt the material, but you may not use it for commercial purposes. See the LICENSE file in the repository for more details.
